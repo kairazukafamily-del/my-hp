@@ -14,10 +14,12 @@ export default function Contact() {
 
         <div className="flex flex-col items-center gap-6">
           <a
-            href={profile.links.email}
+            href={profile.links.threads}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
           >
-            E-mail
+            Threads
           </a>
           <a
             href={profile.links.note}
@@ -34,12 +36,10 @@ export default function Contact() {
             GitHub
           </a>
           <a
-            href={profile.links.threads}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={profile.links.email}
             className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
           >
-            Threads
+            E-mail
           </a>
         </div>
       </div>
