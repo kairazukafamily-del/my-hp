@@ -3,12 +3,12 @@ import { works } from "@/data/works";
 export default function Works() {
   return (
     <section id="works" className="py-32 px-8 bg-[#f7f5f2]">
-      <div className="max-w-md mx-auto">
+      <div className="max-w-xl mx-auto">
         <h2 className="text-2xl font-light text-[#3a3734] tracking-wide mb-12 text-center">
           Works
         </h2>
 
-        <div className="flex flex-col items-center gap-12">
+        <div className="grid grid-cols-2 gap-12">
           {works.map((work) => (
             <div key={work.id} className="flex flex-col items-center text-center">
               <h3 className="text-base font-light text-[#3a3734] mb-3">
@@ -32,10 +32,10 @@ export default function Works() {
 
               <a
                 href={work.url}
+                {...(work.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
               >
-                {/* TODO: リンクラベルを確定する */}
-                View project
+                View
               </a>
             </div>
           ))}

@@ -14,4 +14,11 @@ export const works: Work[] = [
     tags: ["Next.js", "TypeScript", "Tailwind"],
     url: "/",
   },
+  {
+    id: 1,
+    title: "Subscriptions",
+    description: "月額サービスを一元管理するためのツール。USD / JPY 自動換算、ブラウザ通知に対応。",
+    tags: ["Next.js", "TypeScript", "localStorage"],
+    url: "https://subscription-manager-jade.vercel.app",
+  },
 ];
