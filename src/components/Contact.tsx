@@ -1,12 +1,5 @@
 import { profile } from "@/data/profile";
 
-const linkLabels: Record<keyof typeof profile.links, string> = {
-  github: "GitHub",
-  email: "Email",
-  note: "Note",
-  threads: "Threads",
-};
-
 export default function Contact() {
   return (
     <section id="contact" className="py-32 px-8 bg-[#f7f5f2]">
@@ -20,15 +13,34 @@ export default function Contact() {
         </p>
 
         <div className="flex flex-col items-center gap-6">
-          {(Object.keys(profile.links) as (keyof typeof profile.links)[]).map((key) => (
-            <a
-              key={key}
-              href={profile.links[key]}
-              className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
-            >
-              {linkLabels[key]}
-            </a>
-          ))}
+          <a
+            href={profile.links.email}
+            className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
+          >
+            E-mail
+          </a>
+          <a
+            href={profile.links.note}
+            className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
+          >
+            Note
+          </a>
+          <a
+            href={profile.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
+          >
+            GitHub
+          </a>
+          <a
+            href={profile.links.threads}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs tracking-[0.15em] text-[#6a6560] hover:text-[#3a3734] transition-colors"
+          >
+            Threads
+          </a>
         </div>
       </div>
     </section>
